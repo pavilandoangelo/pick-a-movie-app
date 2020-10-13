@@ -4,7 +4,7 @@
       app
       v-model="drawer"
       absolute
-      class="primary fill-height"
+      class="blue fill-height"
       dark
     >
       <v-list-item>
@@ -20,19 +20,24 @@
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          link
+        <v-list-item-group
+          v-model="item"
+          color="white"
         >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+          <v-list-item
+            v-for="item in items"
+            :key="item.title"
+            link
+          >
+            <v-list-item-icon>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
 
@@ -49,9 +54,11 @@
 
       <!-- Provides the application the proper gutter -->
       <v-container fluid>
-
+        <v-row justify="center">
+          <movie-wheel></movie-wheel>
+        </v-row>
         <!-- If using vue-router -->
-        <router-view></router-view>
+        <!-- <router-view></router-view> -->
       </v-container>
     </v-main>
 
@@ -62,14 +69,18 @@
 
 <script>
 
+import MovieWheel from "./components/MovieWheel";
+
 export default {
   name: 'App',
 
   components: {
+    MovieWheel,
   },
 
   data: () => ({
     drawer: true,
+    item: -1,
     items: [
       { title: 'Home', icon: 'mdi-view-dashboard' },
       { title: 'About', icon: 'mdi-forum' },
