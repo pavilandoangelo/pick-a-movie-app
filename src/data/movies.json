@@ -1,0 +1,28 @@
+{
+  "bots": [
+    {
+      "id": 1,
+      "name": "GODFELLAS", 
+      "value": "GODFELLAS",
+      "bgColor": "#45ace9",
+      "color": "#ffffff",
+      "probability": 30
+    },
+    {
+      "id": 2,
+      "name": "INTO THE WILD", 
+      "value": "INTO THE WILD",
+      "bgColor": "#dd3832",
+      "color": "#ffffff",
+      "probability": 40
+    },
+    {
+      "id": 3,
+      "name": "MY LEFT FOOT", 
+      "value": "MY LEFT FOOT",
+      "bgColor": "#fef151",
+      "color": "#ffffff",
+      "probability": 30
+    }
+  ]
+}
