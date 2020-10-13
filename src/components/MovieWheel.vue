@@ -76,7 +76,7 @@ export default {
       console.log(this.isVerifiedCanvas);
       if (this.isVerifiedCanvas) {
         const verified = true; // true: the test passed the verification, false: the test failed the verification
-        this.DoServiceVerify(verified, 2000).then((verifiedRes) => {
+        this.DoServiceVerify(verified, 1).then((verifiedRes) => {
           if (verifiedRes) {
             console.log("Verification passed, start to rotate");
             rotate(); // Call the callback, start spinning
