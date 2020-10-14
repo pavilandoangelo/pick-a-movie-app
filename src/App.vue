@@ -54,8 +54,23 @@
 
       <!-- Provides the application the proper gutter -->
       <v-container fluid>
-        <v-row justify="center">
-          <movie-wheel></movie-wheel>
+        <v-row justify="center" align="center">
+          <v-col md="7" v-bind:style="{ textAlign: 'center' }">
+            <FortuneWheel
+              style="width: 80%"
+              borderColor="#584b43"
+              :fontSize="16"
+              :textLength="20"
+              :borderWidth="6"
+              :prizes="prizes"
+              :verify="isVerifiedCanvas"
+              @rotateStart="onCanvasRotateStart"
+              @rotateEnd="onRotateEnd"
+            />
+          </v-col>
+          <v-col md="5">
+            <movie-details :movieData="movie"></movie-details>
+          </v-col>
         </v-row>
         <!-- If using vue-router -->
         <!-- <router-view></router-view> -->
@@ -69,13 +84,16 @@
 
 <script>
 
-import MovieWheel from "./components/MovieWheel";
+import MovieDetails from "./components/MovieDetails";
+import FortuneWheel from "vue-fortune-wheel";
+import "vue-fortune-wheel/lib/vue-fortune-wheel.css";
+import movies from "./data/movies.json"
 
 export default {
   name: 'App',
-
   components: {
-    MovieWheel,
+    FortuneWheel,
+    MovieDetails,
   },
 
   data: () => ({
@@ -85,6 +103,71 @@ export default {
       { title: 'Home', icon: 'mdi-view-dashboard' },
       { title: 'About', icon: 'mdi-forum' },
     ],
+    canvasVerify: true,
+    prizes: [],
+    movie: true,
   }),
+  created() {
+    // console.log("movies >>> ", movies);
+    const data = movies.bots.map(movie => ({...movie, bgColor: this.getRandomColor()}));
+    // console.log("data >>> ", data);
+    this.prizes = data;
+    // console.log("this.prizes >>> ", this.prizes);
+  },
+  computed: {
+    isVerifiedCanvas: function () {
+      return this.canvasVerify;
+    },
+  },
+  methods: {
+    onImageRotateStart() {
+      console.log("onRotateStart");
+    },
+    onCanvasRotateStart(rotate) {
+      console.log(rotate);
+      console.log(this.isVerifiedCanvas);
+      if (this.isVerifiedCanvas) {
+        const verified = true;
+        this.DoServiceVerify(verified, 1).then((verifiedRes) => {
+          if (verifiedRes) {
+            console.log("Verification passed, start to rotate");
+            rotate();
+            this.canvasVerify = false;
+          } else {
+            alert("Failed verification");
+          }
+        });
+        return;
+      }
+      console.log("onCanvasRotateStart");
+    },
+    onRotateEnd(prize) {
+      this.getMovieData(prize.value);
+    },
+    DoServiceVerify(verified, duration) {
+      return new Promise((resove) => {
+        setTimeout(() => {
+          resove(verified);
+        }, duration);
+      });
+    },
+    getRandomColor() {
+      let letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    },
+    getMovieData(movie) {
+      const baseURI = `http://www.omdbapi.com/?apikey=b0742a8e&t=${movie}`
+      this.$http.get(baseURI)
+      .then((result) => {
+        this.movie = result.data
+        console.log("result >>> ", result);
+        console.log("this.movie >>> ", this.movie);
+      })
+    }
+  },
 };
 </script>

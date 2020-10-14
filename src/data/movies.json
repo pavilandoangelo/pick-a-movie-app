@@ -2,8 +2,8 @@
   "bots": [
     {
       "id": 1,
-      "name": "GODFELLAS", 
-      "value": "GODFELLAS",
+      "name": "GOODFELLAS", 
+      "value": "GOODFELLAS",
       "bgColor": "#45ace9",
       "color": "#ffffff",
       "probability": 30
