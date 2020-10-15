@@ -44,7 +44,7 @@
     <v-app-bar app color="primary" dense dark>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>What movie to watch? Suprise Me!</v-toolbar-title>
+      <v-toolbar-title>Spin the Movie</v-toolbar-title>
 
       <v-spacer></v-spacer>
     </v-app-bar>
@@ -69,7 +69,7 @@
             />
           </v-col>
           <v-col md="5">
-            <movie-details :movieData="movie"></movie-details>
+            <!-- <movie-details :movieData="movie"></movie-details> -->
           </v-col>
         </v-row>
         <!-- If using vue-router -->
@@ -84,7 +84,7 @@
 
 <script>
 
-import MovieDetails from "./components/MovieDetails";
+// import MovieDetails from "./components/MovieDetails";
 import FortuneWheel from "vue-fortune-wheel";
 import "vue-fortune-wheel/lib/vue-fortune-wheel.css";
 import movies from "./data/movies.json"
@@ -93,7 +93,6 @@ export default {
   name: 'App',
   components: {
     FortuneWheel,
-    MovieDetails,
   },
 
   data: () => ({
