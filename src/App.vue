@@ -69,7 +69,7 @@
             />
           </v-col>
           <v-col md="5">
-            <!-- <movie-details :movieData="movie"></movie-details> -->
+            <movie-details :movieData="movie"></movie-details>
           </v-col>
         </v-row>
         <!-- If using vue-router -->
@@ -84,7 +84,7 @@
 
 <script>
 
-// import MovieDetails from "./components/MovieDetails";
+import MovieDetails from "./components/MovieDetails";
 import FortuneWheel from "vue-fortune-wheel";
 import "vue-fortune-wheel/lib/vue-fortune-wheel.css";
 import movies from "./data/movies.json"
@@ -93,6 +93,7 @@ export default {
   name: 'App',
   components: {
     FortuneWheel,
+    MovieDetails,
   },
 
   data: () => ({
