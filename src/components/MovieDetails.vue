@@ -1,7 +1,6 @@
 <template>
   <v-card
     :loading="loading"
-    class="mx-auto my-12"
   >
     <template slot="progress">
       <v-progress-linear
