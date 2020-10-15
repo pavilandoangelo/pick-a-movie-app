@@ -57,7 +57,7 @@
         <v-row justify="center" align="center">
           <v-col md="7" v-bind:style="{ textAlign: 'center' }">
             <FortuneWheel
-              style="width: 80%"
+              style="width: 70%"
               borderColor="#584b43"
               :fontSize="16"
               :textLength="20"
@@ -160,7 +160,7 @@ export default {
       return color;
     },
     getMovieData(movie) {
-      const baseURI = `http://www.omdbapi.com/?apikey=b0742a8e&t=${movie}`
+      const baseURI = `https://www.omdbapi.com/?apikey=b0742a8e&t=${movie}`
       this.$http.get(baseURI)
       .then((result) => {
         this.movie = result.data
