@@ -79,6 +79,7 @@
     <v-footer
       dark
       padless
+      absolute
     >
       <v-card
         class="flex"
@@ -126,7 +127,7 @@ export default {
   },
 
   data: () => ({
-    drawer: true,
+    drawer: false,
     item: 0,
     items: movies,
     canvasVerify: true,
