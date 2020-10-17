@@ -1,28 +1,76 @@
-{
-  "bots": [
-    {
-      "id": 1,
-      "name": "GOODFELLAS", 
-      "value": "GOODFELLAS",
-      "bgColor": "#45ace9",
-      "color": "#ffffff",
-      "probability": 30
-    },
-    {
-      "id": 2,
-      "name": "INTO THE WILD", 
-      "value": "INTO THE WILD",
-      "bgColor": "#dd3832",
-      "color": "#ffffff",
-      "probability": 40
-    },
-    {
-      "id": 3,
-      "name": "MY LEFT FOOT", 
-      "value": "MY LEFT FOOT",
-      "bgColor": "#fef151",
-      "color": "#ffffff",
-      "probability": 30
-    }
-  ]
-}
+[
+  {
+    "title": "Indie",
+    "id": "indie",
+    "icon": "mdi-movie",
+    "data": [
+      {
+        "id": 1,
+        "name": "GET OUT",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 2,
+        "name": "KIDS",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 3,
+        "name": "PI",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 4,
+        "name": "MID90S",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 5,
+        "name": "JUNO",
+        "color": "#ffffff",
+        "probability": "20"
+      }
+    ]
+  },
+  {
+    "title": "Comedy",
+    "id": "comedy",
+    "icon": "mdi-movie-roll",
+    "data": [
+      {
+        "id": 1,
+        "name": "JUMANJI",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 2,
+        "name": "LADY BIRD",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 3,
+        "name": "SPY",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 4,
+        "name": "KICKASS",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 5,
+        "name": "BOOKSMART",
+        "color": "#ffffff",
+        "probability": "20"
+      }
+    ]
+  }
+]

@@ -10,6 +10,12 @@
       ></v-progress-linear>
     </template>
 
+    <!-- <v-img
+      height="250"
+      :src="'https://m.media-amazon.com/images/M/MV5BMTAwNDEyODU1MjheQTJeQWpwZ15BbWU2MDc3NDQwNw@@._V1_SX300.jpg'"
+      aspect-ratio="1.7"
+      contain
+    ></v-img> -->
     <v-img
       height="250"
       :src="movie.Poster"
