@@ -79,7 +79,7 @@
     <v-footer
       dark
       padless
-      absolute
+      fixed
     >
       <v-card
         class="flex"
