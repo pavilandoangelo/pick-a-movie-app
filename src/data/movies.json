@@ -37,6 +37,80 @@
     ]
   },
   {
+    "title": "Animation",
+    "id": "animation",
+    "icon": "mdi-movie-filter",
+    "data": [
+      {
+        "id": 1,
+        "name": "COCO",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 2,
+        "name": "UP",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 3,
+        "name": "WALL-E",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 4,
+        "name": "BOSS BABY",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 5,
+        "name": "DINOSAUR",
+        "color": "#ffffff",
+        "probability": "20"
+      }
+    ]
+  },
+  {
+    "title": "Fantasy",
+    "id": "fantasy",
+    "icon": "mdi-movie-open",
+    "data": [
+      {
+        "id": 1,
+        "name": "HARRY POTTER",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 2,
+        "name": "NARNIA",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 3,
+        "name": "VANILLA SKY",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 4,
+        "name": "NANNY MCPHEE",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 5,
+        "name": "PETER PAN",
+        "color": "#ffffff",
+        "probability": "20"
+      }
+    ]
+  },
+  {
     "title": "Comedy",
     "id": "comedy",
     "icon": "mdi-movie-roll",
@@ -68,6 +142,228 @@
       {
         "id": 5,
         "name": "BOOKSMART",
+        "color": "#ffffff",
+        "probability": "20"
+      }
+    ]
+  },
+  {
+    "title": "Horror",
+    "id": "horror",
+    "icon": "mdi-popcorn",
+    "data": [
+      {
+        "id": 1,
+        "name": "JAWS",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 2,
+        "name": "GET OUT",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 3,
+        "name": "THE RING",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 4,
+        "name": "ALIENS",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 5,
+        "name": "SCREAM",
+        "color": "#ffffff",
+        "probability": "20"
+      }
+    ]
+  },
+  {
+    "title": "Crime",
+    "id": "crime",
+    "icon": "mdi-ticket",
+    "data": [
+      {
+        "id": 1,
+        "name": "JOKER",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 2,
+        "name": "SE7EN",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 3,
+        "name": "UNCUT GEMS",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 4,
+        "name": "PULP FICTION",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 5,
+        "name": "HEAT",
+        "color": "#ffffff",
+        "probability": "20"
+      }
+    ]
+  },
+  {
+    "title": "Sci-Fi",
+    "id": "sci-fi",
+    "icon": "mdi-movie-outline",
+    "data": [
+      {
+        "id": 1,
+        "name": "CONTACT",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 2,
+        "name": "ARRIVAL",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 3,
+        "name": "LUCY",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 4,
+        "name": "GRAVITY",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 5,
+        "name": "MOON",
+        "color": "#ffffff",
+        "probability": "20"
+      }
+    ]
+  },
+  {
+    "title": "Romance",
+    "id": "romance",
+    "icon": "mdi-heart-circle-outline",
+    "data": [
+      {
+        "id": 1,
+        "name": "TITANIC",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 2,
+        "name": "HER",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 3,
+        "name": "CAROL",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 4,
+        "name": "AMOUR",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 5,
+        "name": "ANNIE HALL",
+        "color": "#ffffff",
+        "probability": "20"
+      }
+    ]
+  },
+  {
+    "title": "Mystery",
+    "id": "mystery",
+    "icon": "mdi-movie-filter-outline",
+    "data": [
+      {
+        "id": 1,
+        "name": "OLDBOY",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 2,
+        "name": "THE GAME",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 3,
+        "name": "IDENTITY",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 4,
+        "name": "MEMENTO",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 5,
+        "name": "PRISONERS",
+        "color": "#ffffff",
+        "probability": "20"
+      }
+    ]
+  },
+  {
+    "title": "Based on True Stories",
+    "id": "bots",
+    "icon": "mdi-movie-open-outline",
+    "data": [
+      {
+        "id": 1,
+        "name": "GOODFELLAS",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 2,
+        "name": "INTO THE WILD",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 3,
+        "name": "GANDHI",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 4,
+        "name": "RAGING BULL",
+        "color": "#ffffff",
+        "probability": "20"
+      },
+      {
+        "id": 5,
+        "name": "MILK",
         "color": "#ffffff",
         "probability": "20"
       }
