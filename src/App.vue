@@ -51,14 +51,15 @@
     <!-- Sizes your content based upon application components -->
     <v-main>
       <!-- Provides the application the proper gutter -->
-      <v-container fluid>
-        <v-row justify="center" align="center" class="fill-height">
+      <v-container class="fill-height" fluid>
+        <v-row justify="center" align="center">
           <v-col cols="12" sm="12" md="12" lg="6" v-bind:style="{ textAlign: 'center' }">
             <FortuneWheel
               :key="item"
               style="width: 70%, height: 100%"
               borderColor="#584b43"
-              :fontSize="16"
+              :fontSize="20"
+              :btnWidth="80"
               :textLength="20"
               :borderWidth="6"
               :prizes="getPrizes"
@@ -88,7 +89,7 @@
 
         <v-card-text class="py-2 white--text text-center">
           {{ new Date().getFullYear() }} — <strong>Made with ❤️ by pavilandoangelo</strong>
-           <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
           <v-btn
             v-for="icon in icons"
             :key="icon"
@@ -157,8 +158,6 @@ export default {
       console.log("onRotateStart");
     },
     onCanvasRotateStart(rotate) {
-      console.log(rotate);
-      console.log(this.isVerifiedCanvas);
       if (this.isVerifiedCanvas) {
         const verified = true;
         this.DoServiceVerify(verified, 1).then((verifiedRes) => {
@@ -167,7 +166,7 @@ export default {
             rotate();
             this.canvasVerify = false;
           } else {
-            alert("Failed verification");
+            console.log("Failed verification");
           }
         });
         return;
@@ -209,3 +208,10 @@ export default {
   }
 };
 </script>
+
+<style>
+  .fortuneWheel-btn {
+    font-size: 1.75rem !important;
+    font-size: clamp(1.75rem, 1.75rem, 2rem);
+  }
+</style>
