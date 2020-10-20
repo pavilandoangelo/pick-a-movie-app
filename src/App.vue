@@ -56,7 +56,7 @@
           <v-col cols="12" sm="12" md="12" lg="6" v-bind:style="{ textAlign: 'center' }">
             <FortuneWheel
               :key="item"
-              style="width: 70%, height: 100%"
+              style="width: 100%, height: 100%"
               borderColor="#584b43"
               :fontSize="20"
               :btnWidth="80"
@@ -68,7 +68,7 @@
               @rotateEnd="onRotateEnd"
             />
           </v-col>
-          <v-col cols="12" sm="12" md="12" lg="6">
+          <v-col cols="12" sm="12" md="12" lg="5">
             <movie-details :movieData="movie"></movie-details>
           </v-col>
         </v-row>
@@ -91,14 +91,15 @@
           {{ new Date().getFullYear() }} — <strong>Made with ❤️ by pavilandoangelo</strong>
           <v-spacer></v-spacer>
           <v-btn
-            v-for="icon in icons"
-            :key="icon"
+            v-for="conn in connections"
+            :key="conn.mdiIcon"
             class="mx-4"
             dark
             icon
+            @click="openConnectionLink(conn)"
           >
             <v-icon size="24px">
-              {{ icon }}
+              {{ conn.mdiIcon }}
             </v-icon>
           </v-btn>
         </v-card-text>
@@ -128,11 +129,19 @@ export default {
     canvasVerify: true,
     prizes: [],
     movie: true,
-    icons: [
-      'mdi-facebook',
-      'mdi-twitter',
-      'mdi-linkedin',
-      'mdi-instagram',
+    connections: [
+      {
+        "mdiIcon": "mdi-facebook",
+        "link": "https://www.facebook.com/pavilandoangelo/"
+      },
+      {
+        "mdiIcon": "mdi-linkedin",
+        "link": "https://www.linkedin.com/in/angelo-pavilando-2894a7137/?fbclid=IwAR3BSJZ0q4jqXyxyVuP8l10DkFoG3toa3PUNKJl55Yvoq18TtOIKKWGSl0A"
+      },
+      {
+        "mdiIcon": "mdi-github",
+        "link": "https://github.com/pavilandoangelo"
+      }
     ],
   }),
   created() {
@@ -199,6 +208,9 @@ export default {
         console.log("result >>> ", result);
         console.log("this.movie >>> ", this.movie);
       })
+    },
+    openConnectionLink(connection) {
+      window.open(connection.link, "_blank")
     }
   },
   watch: {
