@@ -68,7 +68,7 @@
               @rotateEnd="onRotateEnd"
             />
           </v-col>
-          <v-col cols="12" sm="12" md="12" lg="5">
+          <v-col cols="12" sm="12" md="12" lg="6">
             <movie-details :movieData="movie"></movie-details>
           </v-col>
         </v-row>

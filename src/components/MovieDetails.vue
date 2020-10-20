@@ -11,7 +11,7 @@
     </template>
     <v-container fluid class="fill-height">
       <v-row>
-        <v-col cols="12" sm="5" md="5" lg="5">
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6">
           <v-img
             :src="movie.Poster ? movie.Poster : this.offlineImage"
             :lazy-src="movie.Poster ? movie.Poster : this.offlineImage"
@@ -33,14 +33,14 @@
             </template>
           </v-img>
         </v-col>
-        <v-col cols="12" sm="6" md="6" lg="6">
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card-title class="align-start">
           <div>
-            <span class="text-h5 text-sm-h4 text-md-h5 text-lg-4">{{ (movie || {}).Title ? movie.Title : "Not Available"}}</span>
-            <div class="grey--text font-weight-light text-h6 text-sm-h5 text-md-h6 text-lg-5">
+            <span class="text-h5 text-sm-h4 text-md-h5 text-lg-h4 text-xl-h3">{{ (movie || {}).Title ? movie.Title : "Not Available"}}</span>
+            <div class="grey--text font-weight-light text-h6 text-sm-h5 text-md-h6 text-lg-h5 text-xl-h4">
               {{ (movie || {}).Genre ? movie.Genre : "Not Available"}}
             </div>
-            <div class="grey--text font-weight-light text-subtitle-1 text-sm-h6 text-md-subtitle-1 text-lg-h6">
+            <div class="grey--text font-weight-light text-subtitle-1 text-sm-h6 text-md-subtitle-1 text-lg-h6 text-xl-h5">
               {{ (movie || {}).Actors ? movie.Actors : "Not Available"}}
             </div>
           </div>
@@ -48,13 +48,13 @@
           </v-card-title>
           <v-divider></v-divider>
           <v-card-actions>
-            <span class="pl-2 grey--text text--darken-2 font-weight-light text-body-2 text-sm-body-1 text-md-body-2 text-lg-bdoy-1">
+            <span class="pl-2 grey--text text--darken-2 font-weight-light text-body-2 text-sm-body-1 text-md-body-2 text-lg-body-1 text-xl-h6">
               <template v-if="getRatingsData">{{ getRatingsData.Value }} ({{ getRatingsData.Source}})</template>
               <template v-else>{{ "Not Available" }}</template>
             </span>
             <v-spacer></v-spacer>
           </v-card-actions>
-          <div class="pa-4 pt-0 text-body-1 text-sm-h6 text-md-body-1 text-lg-h6">
+          <div class="pa-4 pt-0 text-body-1 text-sm-h6 text-md-body-1 text-lg-h6 text-xl-h5">
             <em>{{ (movie || {}).Plot || movie.Plot || "......." }}</em>
           </div>
         </v-col>
